@@ -10,12 +10,14 @@ public static void main(String[] args) {
 	 int i=scan.nextInt();
 	
 	 Scanner scanner=new Scanner(System.in);
+	 scanner.close();
 	 int a=scanner.nextInt();
 	 int result=a*i;	   	
 	System.out.println(result);
 	
 	 su.caculate(result);}
-
+    
+    
 	 public  int  caculate(int result){
 		int odd1=1;
 		int odd2=2;				
@@ -24,16 +26,17 @@ public static void main(String[] args) {
 	  if((result%va)==1) System.out.println("2을 입력하세요");
 	  if((result%va)==0) System.out.println("Good ");	
  	  
-		 Scanner sann= new Scanner(System.in);	 
+	   Scanner sann= new Scanner(System.in);
+        sann.close();
          int arr=sann.nextInt();	 
         if((odd1+arr)%va==0) System.out.println("allright");
         if((odd2+arr)%va==0) System.out.println(" ok");
-         return 0;
+     
+        return 0;
          
-	          
-	 }	
-	
-    		
+	      
+	 }		   
+	 		 
 	 }
 	
 
