@@ -2,7 +2,14 @@ package newpract.cal;
 
 import java.util.Scanner;
 
-public class Newpact {
+public class Newpact {	
+	private static final int[] mon={31,28,31,30,31,30,31,31,30,31,30,31};
+  
+	public int maxDaysCalculate(int i){
+   	return mon[i-1];
+	}
+	
+	
 	public static void main(String[] args) {
 		System.out.println("일   월   화     수   목    금    토");
 		System.out.println("1  2  3  4  5  6  7");
@@ -67,8 +74,8 @@ public class Newpact {
 			break;		
 	}	
 	
-	int []mon={31,28,31,30,31,30,31,31,30,31,30,31};
-	 System.out.println(i+ "월"  +(mon[i-1])+"일");
+	
+	 System.out.println(i+ "월은"  +(mon[i-1])+"일 까지이다");
 	}
 	
 }	
