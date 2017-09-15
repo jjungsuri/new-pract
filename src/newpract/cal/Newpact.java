@@ -20,16 +20,19 @@ public class Newpact {
 		}	
 	}
 
-	public void printCalendar(int year,int month) {
+	public void printCalendar(int year,int month,int weekdayNo) {
 		System.out.printf("  <<%4d년 %3d월>>\n",year,month);
 		System.out.println(" su mo tu we th fr sa");
 		System.out.println("-------------------");
 		
+		for(int j=0; j<weekdayNo; j++){
+			System.out.print("   ");
+		}
 		int maxDay=getMaxDaysOfMonth(year,month);
 		
 		for(int i=1; i<=maxDay; i++){
 			System.out.printf("%3d",i);
-			if(i%7==0) System.out.println();
+			if((i+weekdayNo)%7==0) System.out.println();
 		}
 		System.out.println();
 	}		
