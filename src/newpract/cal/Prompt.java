@@ -29,16 +29,19 @@ public class Prompt {
 		String weekday;
 
 		while (true) {
-			System.out.println("연도을 입력하세요");
+			System.out.println("연도을 입력하세요. [exit:-1}");
 			System.out.print("YEAR> ");
 			year = scan.nextInt();
+			if(year==-1)
+				break;
 			System.out.print("MONTH> ");
 			month = scan.nextInt();
 			System.out.println("그 월의 첫째날 요일 입력하세요(su,mo,tu,we,th,fr,sa).");
 			weekday = scan.next();
 			weekdayNo = parseDay(weekday);
 
-			if (month == -1) {
+			if (month>12||month <1) {
+				System.out.println("Wrong !!");
 				break;
 			}
 			if (month > 12) {
