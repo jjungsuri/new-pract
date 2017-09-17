@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class PromptEx {	
 	
 	CalendarEx cal=new CalendarEx();
+	
 	public void runPrompt(){
 	Scanner scanner=new Scanner(System.in);
 
